@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dom Event</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<script src="js/main.js"></script>
+	<script src="js/jquery-3.3.1.js"></script>
+	<script type="text/javascript">
+		$( document ).ready(function() {
+			$(".container2").hover( function() {
+				alert("HEY I TOLD YOU NOT TO HOVER OVER ME!");
+			});
+
+		});
+
+	</script>
+</head>
+<body>
+	<div class="container">
+		<button type="button" class="btns" onclick="changeResponse1()">Button</button>
+		<h1 id="heading1"></h1>
+	</div>
+
+	<div class="container">
+		<button type="button" class="btns" onclick="changeResponse2()">Button</button>
+		<h1 id="heading2"></h1>
+	</div>
+
+	<div class="container2">
+		<h1 id="hoverHeading">HEY DON'T HOVER OVER ME</h1>
+	</div>
+
+	<div class="container">
+		<h1 id="change">Type Below to see your key presses!</h1>
+		<form>
+			<input type="text" name="fullname" onkeypress="return myFunction(event)">
+		</form>
+	</div>
+
+	<div class="container">
+	<form>
+		<!--All inputs have been given ID's so we can retrieve their input values from the js-->
+		<input type="text" name="fullname" id="userName">Username <br>
+		<input type="text" name="fullname" id="email">Email <br>
+		<input type="password" name="password" id="password">Password <br>
+		<button type="button" id="submitbutton" onclick="verify()">Submit</button>
+	</form>
+	<!--Given an ID so that we can change the text through the js-->
+	<h1 id="verifySay">Please Enter Credentials</h1>
+	</div>
+
+</body>
+</html>
